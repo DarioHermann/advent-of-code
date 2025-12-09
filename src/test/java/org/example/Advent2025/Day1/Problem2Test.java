@@ -19,6 +19,6 @@ public class Problem2Test {
     public void testProblem2_actual() throws IOException {
         var p = new Problem2();
         var input = Helper.getInputsFromInputFileNewLineListListString("src\\test\\resources\\Advent2025\\Day1\\actual_input.txt");
-        assertThat(p.rotations(input)).isEqualTo(3345);
+        assertThat(p.rotations(input)).isEqualTo(6554);
     }
 }

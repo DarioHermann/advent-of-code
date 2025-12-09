@@ -7,6 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Helper {
+    public static List<String> getInputsFromInputFileNewLineListString(String filePath) throws IOException {
+        var path = Path.of(filePath);
+        var inputFile = Files.readString(path);
+        return List.of(inputFile.split("\r\n"));
+    }
+
     public static List<List<String>> getInputsFromInputFileNewLineListListString(String filePath) throws IOException {
         var path = Path.of(filePath);
         var inputFile = Files.readString(path);
