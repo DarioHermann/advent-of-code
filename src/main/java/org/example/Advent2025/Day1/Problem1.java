@@ -29,14 +29,11 @@ public class Problem1 {
     }
 
     private int turnLeft(int position, int distance) {
-        System.out.println("Position before left turn: " + position + ", distance: " + distance);
         position -= distance;
-        System.out.println("Position after left turn: " + position);
         if(position < 0) {
             position %= 100;
             position += position != 0 ? 100 : 0;
         }
-        System.out.println("Normalized position after left turn: " + position);
         return position;
     }
 }

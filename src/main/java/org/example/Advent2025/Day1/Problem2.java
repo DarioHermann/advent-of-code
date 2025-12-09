@@ -16,7 +16,6 @@ public class Problem2 {
                 default -> position;
             };
         }
-        System.out.println("this: " + -25%20);
         return result;
     }
 
@@ -27,26 +26,20 @@ public class Problem2 {
     }
 
     private int turnLeft(int position, int distance) {
-        System.out.println("Position before left turn: " + position + ", distance: " + distance);
         if(position == 0) {
-            System.out.println("Result From 0: " + result);
             result--;
         }
         position -= distance;
-        System.out.println("Position after left turn: " + position);
 
         if(position < 0) {
-            System.out.println("Result: " + result + " Position: " + position);
             result++;
             result += (Math.abs(position)) / 100;
-            System.out.println("Result: " + result);
             position %= 100;
             position += position != 0 ? 100 : 0;
         }
         else if(position == 0) {
             result++;
         }
-//        System.out.println("Normalized position after left turn: " + position);
         return position;
     }
 }
