@@ -39,4 +39,20 @@ public class Helper {
         }
         return inputs;
     }
+
+    public static List<List<Character>> getInputsFromInputFileNewLineListListChar(String filePath) throws IOException {
+        var path = Path.of(filePath);
+        var inputFile = Files.readString(path);
+        var lines = inputFile.split("\r\n");
+
+        var inputs = new ArrayList<List<Character>>();
+        for(var line : lines) {
+            var charList = new ArrayList<Character>();
+            for(var c : line.toCharArray()) {
+                charList.add(c);
+            }
+            inputs.add(charList);
+        }
+        return inputs;
+    }
 }
